@@ -14,12 +14,16 @@ function toRoman(num) {
         4: 'IV',
         1: 'I',
       };
-    let rom = "";
-    console.log("first","second","third")
-    for (let key in romanNumerals) {
-        console.log(romanNumerals[key]); 
+    let romArr = [];
+    for (let key in romanNumerals) {romArr.push([parseInt(key), romanNumerals[key],])};
+    romArr.reverse();
+    for (let num of romArr) {
+        console.log(num[0]);
+        if (num[0] > num) {
+            console.log("num smaller!")
+        }
     }
-    //num.toString().length;
+    console.log(romArr)
 }
 
 function fromRoman(string) {
